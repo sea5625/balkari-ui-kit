@@ -1,0 +1,140 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+import Sorting from "./stories/Sorting";
+import Selection from "./stories/Selection";
+import Paging from "./stories/Paging";
+import Sizing from "./stories/Sizing";
+import StrippedRow from "./stories/StrippedRow";
+import CustomStyledCell from "./stories/CustomStyledCell";
+
+<Meta title="Documents|DataTable" />
+
+# DataTable
+
+Shows tabular data, defined by a list of items: the rows, and another list with their corresponding definitions: the headers. Both these lists are arrays of objects.
+
+The `DataTable` component needs two props to be provided: rows and headers. The rows prop is the data you would like to display in the rows of your table, whereas headers specifies which table column headings should be displayed.
+
+---
+
+Each row in the rows prop should provide a unique id, but everything else can be configured according to your data.
+
+```javascript
+const rows = [
+    {
+            id: 0,
+            name: {
+                text: 'Name',
+                className: "data-table-cell-link",
+                callbackFunc: () => {
+                    console.log("callbackFunc");
+                }
+            },
+            protocol: { text: "HTTP" },
+            price: { text: 1000 },
+            rule: { text: "Round" },
+            attached_groups: { text: "Kevins" },
+            status: {
+                text: "Pending",
+                className: "data-table-cell-status"
+            }
+]
+```
+
+---
+
+The headers will specify the column headers in your table. The header property for each item will describe what the user sees in the table column header. The key property is used to relate what value a row has for the given column.
+
+```javascript
+const headers = [
+    {
+        headerKey: "name",
+        text: "Name"
+    },
+
+    {
+        headerKey: "price",
+        text: "Price"
+    },
+    {
+        headerKey: "rule",
+        text: "Rule"
+    },
+    {
+        headerKey: "attached_groups",
+        text: "Attached"
+    },
+    {
+        headerKey: "protocol",
+        text: "Protocol"
+    },
+    {
+        headerKey: "status",
+        text: "Status"
+    }
+];
+```
+
+After rendering a `DataTable` component, optionally add any number of features including style, sorting, selection, paging.
+
+---
+
+---
+
+## Sorting
+
+To align rows in the data table, sorting props must be passed to the `DataTable` component and each header must have an isSortable value.
+
+<Sorting />
+
+---
+
+---
+
+## Selection
+
+To select rows in the data table, selection props must be passed to the `DataTable` component.
+The selection callbackFunc returns the id arrangement of the selected row.
+
+<Selection />
+
+---
+
+---
+
+## Paging
+
+To page the data table, callback function, which receives limit, offset, total, and limit values must be passed to the `DataTable` component.
+
+<Paging />
+
+---
+
+---
+
+## Style
+
+---
+
+### Sizing
+
+Size depends on row height.
+
+<Sizing />
+
+---
+
+### StrippedRow
+
+Sets background color setting for row:nth-child-type (2n) and default value is true.
+
+<StrippedRow />
+
+---
+
+### CustomStyledCell
+
+Set the style by customizing the cells of each column.
+
+<CustomStyledCell />
+
+---

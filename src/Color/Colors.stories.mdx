@@ -1,0 +1,394 @@
+import { Meta, ColorPalette, ColorItem } from "@storybook/addon-docs/blocks";
+import { color, Swatch } from "../../src/shared/colors";
+
+<Meta title="Documents|Colors" />
+
+# Colors
+
+The visual identity includes that can be used with the logo in communications products. Please do not use any other colors. The palette can, however, be extended by using different hues of these colors. The color reference codes are shown below.
+
+---
+
+## Primary
+
+A primary color is the color displayed most frequently across your applications's screens and components.
+
+---
+
+#### Accessible colors
+
+| Theme         | Token (theme_opercityUnit : 10)                                          | Default Token | Default Hex |
+| ------------- | ------------------------------------------------------------------------ | ------------- | ----------- |
+| **_Primary_** | `primary_10`, `primary_20`, `primary_30`, `primary_40` ... `primary_100` | `primary`     | #1ABC9C     |
+
+---
+
+<ColorPalette>
+    <ColorItem
+        title="Primary"
+        subtitle="Variable"
+        colors={[
+            color.primary_100,
+            color.primary_90,
+            color.primary_80,
+            color.primary_70,
+            color.primary_60,
+            color.primary_50,
+            color.primary_40,
+            color.primary_30,
+            color.primary_20,
+            color.primary_10
+        ]}
+    />
+    <ColorItem title="Primary" subtitle="Default" colors={[color.primary]} />
+</ColorPalette>
+
+## Success
+
+This color represents a success message or a success symbol for a particular event in our application.
+
+#### Accessible colors
+
+| Theme         | Token (theme_opercityUnit : 10)                                          | Default Token | Default Hex |
+| ------------- | ------------------------------------------------------------------------ | ------------- | ----------- |
+| **_Success_** | `success_10`, `success_20`, `success_30`, `success_40` ... `success_100` | `success`     | #2ECC71     |
+
+---
+
+<ColorPalette>
+    <ColorItem
+        title="Success"
+        subtitle="Variable"
+        colors={[
+            color.success_100,
+            color.success_90,
+            color.success_80,
+            color.success_70,
+            color.success_60,
+            color.success_50,
+            color.success_40,
+            color.success_30,
+            color.success_20,
+            color.success_10
+        ]}
+    />
+    <ColorItem title="Success" subtitle="Default" colors={[color.success]} />
+</ColorPalette>
+
+## Info
+
+This color represents the user's need information, significance, for executing specific events in our applications.
+
+#### Accessible colors
+
+---
+
+| Theme      | Token (theme_opercityUnit : 10)                           | Default Token | Default Hex |
+| ---------- | --------------------------------------------------------- | ------------- | ----------- |
+| **_Info_** | `info_10`, `info_20`, `info_30`, `info_40` ... `info_100` | `info`        | #3498DB     |
+
+---
+
+<ColorPalette>
+    <ColorItem
+        title="Info"
+        subtitle="Variable"
+        colors={[
+            color.info_100,
+            color.info_90,
+            color.info_80,
+            color.info_70,
+            color.info_60,
+            color.info_50,
+            color.info_40,
+            color.info_30,
+            color.info_20,
+            color.info_10
+        ]}
+    />
+    <ColorItem title="Info" subtitle="Default" colors={[color.info]} />
+</ColorPalette>
+
+## Warning
+
+This color represents the warning message for a specific event in our application.
+
+---
+
+#### Accessible colors
+
+| Theme         | Token (theme_opercityUnit : 10)                                          | Default Token | Default Hex |
+| ------------- | ------------------------------------------------------------------------ | ------------- | ----------- |
+| **_Warning_** | `warning_10`, `warning_20`, `warning_30`, `warning_40` ... `warning_100` | `warning`     | #F1C40F     |
+
+---
+
+<ColorPalette>
+    <ColorItem
+        title="Warning"
+        subtitle="Variable"
+        colors={[
+            color.warning_100,
+            color.warning_90,
+            color.warning_80,
+            color.warning_70,
+            color.warning_60,
+            color.warning_50,
+            color.warning_40,
+            color.warning_30,
+            color.warning_20,
+            color.warning_10
+        ]}
+    />
+    <ColorItem title="Warning" subtitle="Default" colors={[color.warning]} />
+</ColorPalette>
+
+## Danger
+
+This color represents the danger message for a specific event in our application.
+
+---
+
+#### Accessible colors
+
+| Theme        | Token (theme_opercityUnit : 10)                                     | Default Token | Default Hex |
+| ------------ | ------------------------------------------------------------------- | ------------- | ----------- |
+| **_Danger_** | `danger_10`, `danger_20`, `danger_30`, `danger_40` ... `danger_100` | `danger`      | #E74C3C     |
+
+---
+
+<ColorPalette>
+    <ColorItem
+        title="Danger"
+        subtitle="Variable"
+        colors={[
+            color.danger_100,
+            color.danger_90,
+            color.danger_80,
+            color.danger_70,
+            color.danger_60,
+            color.danger_50,
+            color.danger_40,
+            color.danger_30,
+            color.danger_20,
+            color.danger_10
+        ]}
+    />
+    <ColorItem title="Danger" subtitle="Default" colors={[color.danger]} />
+</ColorPalette>
+
+## Darker & Lighter
+
+This color is the color that our application uses to construct the dark color and light color.
+
+#### Accessible colors
+
+| Theme            | Token         | Default Token | Hex     |
+| ---------------- | ------------- | ------------- | ------- |
+| **Lighter**      | `lightest`    | -             | #FFFFFF |
+| **Lighter**      | `lighter`     | -             | #F8F8F8 |
+| **Light**        | `light`       | -             | #F3F3F3 |
+| **Medium Light** | `mediumlight` | -             | #EEEEEE |
+| **Medium**       | `medium`      | -             | #DDDDDD |
+| **Medium Dark**  | `mediumdark`  | -             | #999999 |
+| **Dark**         | `dark`        | -             | #FFFFFF |
+| **Darker**       | `darker`      | -             | #F8F8F8 |
+| **Darkest**      | `darkest`     | -             | #F3F3F3 |
+
+---
+
+| Theme      | Token    | Default Token | rgb            |
+| ---------- | -------- | ------------- | -------------- |
+| **Border** | `border` | -             | rgba(0,0,0,.1) |
+
+---
+
+<ColorPalette>
+    <ColorItem
+        title="Darker & Lighter"
+        subtitle="Variable"
+        colors={[
+            color.lightest,
+            color.lighter,
+            color.light,
+            color.mediumlight,
+            color.medium,
+            color.mediumdark,
+            color.dark,
+            color.darker,
+            color.darkest
+        ]}
+    />
+    <ColorItem title="Border" subtitle="Variable" colors={[color.border]} />
+</ColorPalette>
+
+## Etc.
+
+This color is used in the color palette except for the primary color and various theme colors in our application.
+
+#### Accessible colors
+
+| Theme     | Token (theme_opercityUnit : 20)                                            | Default Token |
+| --------- | -------------------------------------------------------------------------- | ------------- |
+| **_etc_** | `etcColorKey_20`, `etcColorKey_40`, `etcColorKey_60` ... `etcColorKey_100` | `etcColorKey` |
+
+---
+
+<ColorPalette>
+    <ColorItem
+        title="Red "
+        subtitle="Variable (Key : red)"
+        colors={[
+            color.red,
+            color.red_100,
+            color.red_80,
+            color.red_60,
+            color.red_40,
+            color.red_20
+        ]}
+    />
+    <ColorItem
+        title="Pink "
+        subtitle="Variable (Key : pink)"
+        colors={[
+            color.pink,
+            color.pink_100,
+            color.pink_80,
+            color.pink_60,
+            color.pink_40,
+            color.pink_20
+        ]}
+    />
+    <ColorItem
+        title="Purple"
+        subtitle="Variable (Key : purple)"
+        colors={[
+            color.purple,
+            color.purple_100,
+            color.purple_80,
+            color.purple_60,
+            color.purple_40,
+            color.purple_20
+        ]}
+    />
+    <ColorItem
+        title="Blue"
+        subtitle="Variable (Key : blue)"
+        colors={[
+            color.blue,
+            color.blue_100,
+            color.blue_80,
+            color.blue_60,
+            color.blue_40,
+            color.blue_20
+        ]}
+    />
+    <ColorItem
+        title="Light blue"
+        subtitle="Variable (Key : light_blue)"
+        colors={[
+            color.light_blue,
+            color.light_blue_100,
+            color.light_blue_80,
+            color.light_blue_60,
+            color.light_blue_40,
+            color.light_blue_20
+        ]}
+    />
+    <ColorItem
+        title="Green"
+        subtitle="Variable (Key : green)"
+        colors={[
+            color.green,
+            color.green_100,
+            color.green_80,
+            color.green_60,
+            color.green_40,
+            color.green_20
+        ]}
+    />
+    <ColorItem
+        title="Lime"
+        subtitle="Variable (Key : lime)"
+        colors={[
+            color.lime,
+            color.lime_100,
+            color.lime_80,
+            color.lime_60,
+            color.lime_40,
+            color.lime_20
+        ]}
+    />
+    <ColorItem
+        title="Yellow"
+        subtitle="Variable (Key : yellow)"
+        colors={[
+            color.yellow,
+            color.yellow_100,
+            color.yellow_80,
+            color.yellow_60,
+            color.yellow_40,
+            color.yellow_20
+        ]}
+    />
+    <ColorItem
+        title="Amber"
+        subtitle="Variable (Key : amber)"
+        colors={[
+            color.amber,
+            color.amber_100,
+            color.amber_80,
+            color.amber_60,
+            color.amber_40,
+            color.amber_20
+        ]}
+    />
+    <ColorItem
+        title="Orange"
+        subtitle="Variable (Key : orange)"
+        colors={[
+            color.orange,
+            color.orange_100,
+            color.orange_80,
+            color.orange_60,
+            color.orange_40,
+            color.orange_20
+        ]}
+    />
+    <ColorItem
+        title="Brown"
+        subtitle="Variable (Key : brown)"
+        colors={[
+            color.brown,
+            color.brown_100,
+            color.brown_80,
+            color.brown_60,
+            color.brown_40,
+            color.brown_20
+        ]}
+    />
+    <ColorItem
+        title="Gray"
+        subtitle="Variable (Key : gray)"
+        colors={[
+            color.gray,
+            color.gray_100,
+            color.gray_80,
+            color.gray_60,
+            color.gray_40,
+            color.gray_20
+        ]}
+    />
+    <ColorItem
+        title="Blue Gray"
+        subtitle="Variable (Key : blue_gray)"
+        colors={[
+            color.blue_gray,
+            color.blue_gray_100,
+            color.blue_gray_80,
+            color.blue_gray_60,
+            color.blue_gray_40,
+            color.blue_gray_20
+        ]}
+    />
+</ColorPalette>

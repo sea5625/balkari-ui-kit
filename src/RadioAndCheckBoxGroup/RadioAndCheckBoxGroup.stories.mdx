@@ -1,0 +1,150 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import RadioButton from '../RadioButton/RadioButton';
+import {
+  InlineRadioGroup,
+  BlockRadioGroup,
+  InlineCheckboxGroup,
+  BlockCheckboxGroup,
+} from './RadioAndCheckBoxGroup.stories.tsx';
+import {
+  OneChoiceRadioButton,
+  DisabledRadioButton,
+  ReadOnlyRadioButton,
+} from '../RadioButton/RadioButton.stories.tsx';
+
+import {
+  OneChoiceCheckBox,
+  DisabledCheckBox,
+  ReadOnlyCheckBox,
+} from '../CheckBox/CheckBox.stories.tsx';
+
+<Meta title="Documents | RadioButton and CheckBox" />
+
+# RadioButton and CheckBox
+
+`RadioButton`, `CheckBox`component is commonly used with `RadioAndCheckBoxGroup` component.
+
+`RadioButton` Component
+
+- UUse to select only one of several items
+
+- The default value or the most used item is provided selected
+
+`CheckBox` Component
+
+- Use to select one or more items
+
+- Provides a complete check box for all items
+
+---
+
+---
+
+## Radio Button
+
+---
+
+---
+
+### Default
+
+---
+
+<OneChoiceRadioButton />
+
+---
+
+---
+
+### Disabled
+
+---
+
+<DisabledRadioButton />
+
+---
+
+---
+
+### Read Only
+
+---
+
+<ReadOnlyRadioButton />
+
+---
+
+---
+
+---
+
+## CheckBox
+
+---
+
+---
+
+### Default
+
+---
+
+<OneChoiceCheckBox />
+
+---
+
+---
+
+### Disabled
+
+---
+
+<DisabledCheckBox />
+
+---
+
+---
+
+### Read Only
+
+---
+
+<ReadOnlyCheckBox />
+
+---
+
+---
+
+---
+
+## Formatting (Group)
+
+---
+
+### Legend
+
+- If necessary, a heading can accompany a set of checkboxes to provide further context or clarity.
+- A group label can either state the category of the grouping or describe what actions to take below.
+- Use sentence case for group labels.
+
+---
+
+### Helper
+
+- Helper text is pertinent information that assists the user in completing a select.
+- Use sentence-style capitalization, and in most cases, write the text as full sentences with punctuation.
+
+---
+
+---
+
+<InlineRadioGroup />
+
+---
+
+---
+
+---
+
+<InlineCheckboxGroup />
+
+---

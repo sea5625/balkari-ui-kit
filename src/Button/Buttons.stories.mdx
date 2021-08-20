@@ -1,0 +1,514 @@
+import { Meta, ColorPalette, ColorItem } from '@storybook/addon-docs/blocks';
+import { color, Swatch } from '../../src/shared/colors';
+import Button from './Button';
+import ButtonGroup from '../ButtonGroup/ButtonGroup';
+import { CopyButton } from './Button.stories.tsx'
+import { BsChevronRight, BsFillStarFill } from 'react-icons/bs';
+import { AiOutlinePlus, AiFillHeart } from 'react-icons/ai';
+
+<Meta title="Documents|Button" />
+
+# Button
+
+The `Button` component is used to trigger an action.
+
+---
+
+## Primary
+
+Used for "call to action", i.e. triggering the main action. There should never be more than one on a page. If you need multiple buttons for different actions, decide which action is the most important and make that the primary Button. All other Button components should be secondary.
+If there is no primary action, all `Button` components should be secondary.
+
+---
+
+#### Normal
+
+<ButtonGroup nonFlex="true">
+  <Button kind="primary" size="giant">
+    Giant
+  </Button>
+  <Button kind="primary" size="large">
+    Large
+  </Button>
+  <Button kind="primary" size="medium">
+    Medium
+  </Button>
+  <Button kind="primary" size="small">
+    Small
+  </Button>
+  <Button kind="primary" size="tiny">
+    Tiny
+  </Button>
+</ButtonGroup>
+
+---
+
+---
+
+#### With Icons
+
+<ButtonGroup nonFlex="true">
+  <Button kind="primary" size="giant" iconPosition="right">
+    Giant
+    <BsChevronRight />
+  </Button>
+  <Button kind="primary" size="large" iconPosition="right">
+    Large
+    <BsChevronRight />
+  </Button>
+  <Button kind="primary" size="medium" iconPosition="right">
+    Medium
+    <BsChevronRight />
+  </Button>
+  <Button kind="primary" size="small" iconPosition="right">
+    Small
+    <BsChevronRight />
+  </Button>
+  <Button kind="primary" size="tiny" iconPosition="right">
+    Tiny
+    <BsChevronRight />
+  </Button>
+</ButtonGroup>
+
+---
+
+---
+
+#### Only Icons
+
+---
+
+##### Default (circle)
+
+<ButtonGroup nonFlex="true">
+  <Button kind="primary" size="giant" iconOnly>
+    <BsFillStarFill />
+  </Button>
+  <Button kind="primary" size="large" iconOnly>
+    <BsFillStarFill />
+  </Button>
+  <Button kind="primary" size="medium" iconOnly>
+    <BsFillStarFill />
+  </Button>
+  <Button kind="primary" size="small" iconOnly>
+    <BsFillStarFill />
+  </Button>
+  <Button kind="primary" size="tiny" iconOnly>
+    <BsFillStarFill />
+  </Button>
+</ButtonGroup>
+
+---
+
+##### Square
+
+<ButtonGroup nonFlex="true">
+  <Button kind="primary" size="giant" iconOnly iconType="square">
+    <BsFillStarFill />
+  </Button>
+  <Button kind="primary" size="large" iconOnly iconType="square">
+    <BsFillStarFill />
+  </Button>
+  <Button kind="primary" size="medium" iconOnly iconType="square">
+    <BsFillStarFill />
+  </Button>
+  <Button kind="primary" size="small" iconOnly iconType="square">
+    <BsFillStarFill />
+  </Button>
+  <Button kind="primary" size="tiny" iconOnly iconType="square">
+    <BsFillStarFill />
+  </Button>
+</ButtonGroup>
+
+---
+
+---
+
+#### Disabled
+
+<ButtonGroup nonFlex="true">
+  <Button kind="primary" size="giant" disabled>
+    Giant
+  </Button>
+  <Button kind="primary" size="large" disabled>
+    Large
+  </Button>
+  <Button kind="primary" size="medium" disabled>
+    Medium
+  </Button>
+  <Button kind="primary" size="small" disabled>
+    Small
+  </Button>
+  <Button kind="primary" size="tiny" disabled>
+    Tiny
+  </Button>
+</ButtonGroup>
+
+---
+
+---
+
+---
+
+## Secondary
+
+The secondary `Button` is the default button style and can trigger various actions. How it is used depends on its surroundings:
+
+- When next to the primary `Button`, the Secondary style can for example be used for "Cancel" or "Abort" actions.
+- When there is no main important action on a given page, all `Button` components should use the secondary style.
+
+---
+
+#### Normal
+
+<ButtonGroup nonFlex="true">
+  <Button kind="secondary" size="giant">
+    Giant
+  </Button>
+  <Button kind="secondary" size="large">
+    Large
+  </Button>
+  <Button kind="secondary" size="medium">
+    Medium
+  </Button>
+  <Button kind="secondary" size="small">
+    Small
+  </Button>
+  <Button kind="secondary" size="tiny">
+    Tiny
+  </Button>
+</ButtonGroup>
+
+---
+
+---
+
+#### With Icons
+
+<ButtonGroup nonFlex="true">
+  <Button kind="secondary" size="giant" iconPosition="right">
+    Giant
+    <BsChevronRight />
+  </Button>
+  <Button kind="secondary" size="large" iconPosition="right">
+    Large
+    <BsChevronRight />
+  </Button>
+  <Button kind="secondary" size="medium" iconPosition="right">
+    Medium
+    <BsChevronRight />
+  </Button>
+  <Button kind="secondary" size="small" iconPosition="right">
+    Small
+    <BsChevronRight />
+  </Button>
+  <Button kind="secondary" size="tiny" iconPosition="right">
+    Tiny
+    <BsChevronRight />
+  </Button>
+</ButtonGroup>
+
+---
+
+---
+
+#### Only Icons
+
+---
+
+##### Default (circle)
+
+<ButtonGroup nonFlex="true">
+  <Button kind="secondary" size="giant" iconOnly>
+    <BsFillStarFill />
+  </Button>
+  <Button kind="secondary" size="large" iconOnly>
+    <BsFillStarFill />
+  </Button>
+  <Button kind="secondary" size="medium" iconOnly>
+    <BsFillStarFill />
+  </Button>
+  <Button kind="secondary" size="small" iconOnly>
+    <BsFillStarFill />
+  </Button>
+  <Button kind="secondary" size="tiny" iconOnly>
+    <BsFillStarFill />
+  </Button>
+</ButtonGroup>
+
+---
+
+##### Square
+
+<ButtonGroup nonFlex="true">
+  <Button kind="secondary" size="giant" iconOnly iconType="square">
+    <BsFillStarFill />
+  </Button>
+  <Button kind="secondary" size="large" iconOnly iconType="square">
+    <BsFillStarFill />
+  </Button>
+  <Button kind="secondary" size="medium" iconOnly iconType="square">
+    <BsFillStarFill />
+  </Button>
+  <Button kind="secondary" size="small" iconOnly iconType="square">
+    <BsFillStarFill />
+  </Button>
+  <Button kind="secondary" size="tiny" iconOnly iconType="square">
+    <BsFillStarFill />
+  </Button>
+</ButtonGroup>
+
+---
+
+---
+
+---
+
+#### Disabled
+
+<ButtonGroup nonFlex="true">
+  <Button kind="secondary" size="giant" disabled>
+    Giant
+  </Button>
+  <Button kind="secondary" size="large" disabled>
+    Large
+  </Button>
+  <Button kind="secondary" size="medium" disabled>
+    Medium
+  </Button>
+  <Button kind="secondary" size="small" disabled>
+    Small
+  </Button>
+  <Button kind="secondary" size="tiny" disabled>
+    Tiny
+  </Button>
+</ButtonGroup>
+
+---
+
+---
+
+---
+
+## Tertiary (Link)
+
+Tertiary buttons can be used in isolation, for less prominent actions, or paired with a Primary or Secondary button, or multiple CTAs around the same subject (see some example use cases).
+
+- A Tertiary button has the same dimensions (height) as primary and secondary, only it has no background or border color.
+- Used for hyperlinks.
+
+---
+
+#### Normal
+
+<ButtonGroup nonFlex="true">
+  <Button kind="link" size="giant">
+    Giant
+  </Button>
+  <Button kind="link" size="large">
+    Large
+  </Button>
+  <Button kind="link" size="medium">
+    Medium
+  </Button>
+  <Button kind="link" size="small">
+    Small
+  </Button>
+  <Button kind="link" size="tiny">
+    Tiny
+  </Button>
+</ButtonGroup>
+
+---
+
+---
+
+#### With Icons
+
+<ButtonGroup nonFlex="true">
+  <Button kind="link" size="giant" iconPosition="right">
+    Giant
+    <BsChevronRight />
+  </Button>
+  <Button kind="link" size="large" iconPosition="right">
+    Large
+    <BsChevronRight />
+  </Button>
+  <Button kind="link" size="medium" iconPosition="right">
+    Medium
+    <BsChevronRight />
+  </Button>
+  <Button kind="link" size="small" iconPosition="right">
+    Small
+    <BsChevronRight />
+  </Button>
+  <Button kind="link" size="tiny" iconPosition="right">
+    Tiny
+    <BsChevronRight />
+  </Button>
+</ButtonGroup>
+
+---
+
+---
+
+#### Disabled
+
+<ButtonGroup nonFlex="true">
+  <Button kind="link" size="giant" disabled>
+    Giant
+  </Button>
+  <Button kind="link" size="large" disabled>
+    Large
+  </Button>
+  <Button kind="link" size="medium" disabled>
+    Medium
+  </Button>
+  <Button kind="link" size="small" disabled>
+    Small
+  </Button>
+  <Button kind="link" size="tiny" disabled>
+    Tiny
+  </Button>
+</ButtonGroup>
+
+---
+
+---
+
+---
+
+## Status
+
+This button is for triggering according to the policy in the application and status.
+
+- success
+- Info
+- Warning
+- Danger
+
+---
+
+---
+
+#### Normal
+
+<ButtonGroup gap="0.5rem">
+  <Button kind="primary" size="large">
+    Primary
+  </Button>
+  <Button kind="success" size="large">
+    Success
+  </Button>
+  <Button kind="info" size="large">
+    Info
+  </Button>
+  <Button kind="warning" size="large">
+    Warning
+  </Button>
+  <Button kind="danger" size="large">
+    Danger
+  </Button>
+</ButtonGroup>
+
+---
+
+---
+
+#### With Icons
+
+<ButtonGroup nonFlex="true">
+  <Button kind="primary" size="giant" iconPosition="right">
+    Giant
+    <BsChevronRight />
+  </Button>
+  <Button kind="success" size="large" iconPosition="right">
+    Large
+    <BsChevronRight />
+  </Button>
+  <Button kind="info" size="medium" iconPosition="right">
+    Medium
+    <BsChevronRight />
+  </Button>
+  <Button kind="warning" size="small" iconPosition="right">
+    Small
+    <BsChevronRight />
+  </Button>
+  <Button kind="danger" size="tiny" iconPosition="right">
+    Tiny
+    <BsChevronRight />
+  </Button>
+</ButtonGroup>
+
+---
+
+---
+
+#### Only Icons
+
+---
+
+##### Default (circle)
+
+<ButtonGroup gap="0.5rem" nonFlex="true">
+  <Button kind="primary" size="giant" iconOnly="circle">
+    <BsFillStarFill />
+  </Button>
+  <Button kind="success" size="large" iconOnly="circle">
+    <BsFillStarFill />
+  </Button>
+  <Button kind="info" size="medium" iconOnly="square">
+    <BsFillStarFill />
+  </Button>
+  <Button kind="warning" size="small" iconOnly="square">
+    <BsFillStarFill />
+  </Button>
+  <Button kind="danger" size="tiny" iconOnly="square">
+    <BsFillStarFill />
+  </Button>
+</ButtonGroup>
+
+---
+
+##### Square
+
+<ButtonGroup gap="0.5rem" nonFlex="true">
+  <Button kind="primary" size="giant" iconOnly="circle" iconType="square">
+    <BsFillStarFill />
+  </Button>
+  <Button kind="success" size="large" iconOnly="circle" iconType="square">
+    <BsFillStarFill />
+  </Button>
+  <Button kind="info" size="medium" iconOnly="square" iconType="square">
+    <BsFillStarFill />
+  </Button>
+  <Button kind="warning" size="small" iconOnly="square" iconType="square">
+    <BsFillStarFill />
+  </Button>
+  <Button kind="danger" size="tiny" iconOnly="square" iconType="square">
+    <BsFillStarFill />
+  </Button>
+</ButtonGroup>
+
+---
+
+---
+
+---
+
+
+## Live Demo (with Notification Component)
+
+---
+
+---
+
+<CopyButton/>
+
+
+### Copy Button
+
+- Refer to the description of the `Notification` component used with copyButton for the position.
+
+
+---

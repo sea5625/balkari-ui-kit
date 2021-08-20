@@ -1,0 +1,91 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+import { IconTooltip, TooltipPosition } from "./Tooltip.stories.tsx"
+
+
+<Meta title="Documents | Tooltip" />
+
+# Tooltip
+
+The `Tooltip` display additional information upon mouse event. The information should be contextual, useful, and nonessential.
+
+---
+
+## Style
+
+---
+
+
+### Tooltip Kinds(primary, info, success, warning, error)
+
+---
+
+---
+
+<IconTooltip/>
+
+---
+
+### Placement
+
+---
+---
+
+
+<TooltipPosition/>
+
+---
+ Tooltips may be positioned top, bottom, left, or right to the trigger item. The container of the tooltip text may be aligned to start, center or end
+
+
+
+ ### Usage
+
+ ```javascript
+    const [state, setState] = useState({
+        x: 0,
+        y: 0,
+        w: 0,
+        h: 0,
+        visible: false
+    })
+
+    // * You have to create your own functions for mouse events. (hover, focus, blur, click)
+    const onMouseOverPeer = (e) => {
+        const { top, left, width, height } = e.currentTarget.getBoundingClientRect();
+
+        setState({
+            x: left,
+            y: top,
+            w: width,
+            h: height,
+            visible: true
+        })
+    }
+
+    const onMouseOutPeer = () => {
+        setState({
+            x: 0,
+            y: 0,
+            w: 0,
+            h: 0,
+            visible: false
+        })
+    }
+
+    return (
+        <div style={{ textAlign: "center" }}>
+            <div style={{ display: "inline-block" }} onMouseOver={onMouseOverPeer}
+                onMouseOut={onMouseOutPeer}>
+                Hover Me
+            </div>
+            <Tooltip
+                tooltipPosition="top"
+                w={state.w}
+                h={state.h}
+                x={state.x}
+                y={state.y}
+                visible={state.visible}
+                data="Default tooltip" />
+        </div >
+    );
+```

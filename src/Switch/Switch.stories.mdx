@@ -1,0 +1,49 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+import { Example, Label, On, Off, Status } from "./Switch.stories.tsx";
+import Switch from "./Switch";
+
+<Meta title="Documents|Switch" />
+
+# Switch
+
+`Switch` is a control that is used to quickly switch between two possible states. Toggles are only used for these binary actions that occur immediately after the user “flips” the toggle switch. They are commonly used for “on/off” switches.
+
+---
+
+<Example />
+
+---
+
+---
+
+## Label
+
+Effective form labeling helps users understand what information to enter into switch. abels should be three words or less and appear on the side of a switch.
+
+<Label />
+
+---
+
+## On/Off With Text
+
+Text that appears on the right side of the `Switch` when the switch is on or off. There is no default value, so if you want to use it, have to pass it to the switch component by props.
+
+<Off />
+<On />
+
+---
+
+## Status
+
+Describe the status of the situation when the switch is turned on.
+
+<Status />
+
+---
+
+## Disabled
+
+---
+
+<Switch disabled offText={"Off"} />
+<Switch disabled onText={"On"} checked />

@@ -1,0 +1,216 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+import TextInput from "./TextInput";
+import {
+    JoinExample,
+    TogglePasswordVisibility,
+    WithButtonInput,
+    ReadOnlyInput,
+    DisabledInput,
+    Sizes,
+    CustomedWidth
+} from "./TextInput.stories.tsx";
+import { BsChevronRight, BsFillStarFill } from "react-icons/bs";
+import { AiOutlinePlus, AiFillHeart } from "react-icons/ai";
+
+<Meta title="Documents|TextInput" />
+
+# TextInput
+
+The `TextInput` enable the user to interact with and input content and data.
+
+---
+
+## Style
+
+---
+
+### Sizes
+
+---
+
+<Sizes />
+
+---
+
+---
+
+### Customed Width
+
+<CustomedWidth />
+
+---
+
+---
+
+### Disabled Input
+
+---
+
+---
+
+<DisabledInput />
+
+---
+
+---
+
+---
+
+### Read Only Input
+
+---
+
+---
+
+<ReadOnlyInput />
+
+---
+
+---
+
+---
+
+## Formatting
+
+---
+
+---
+
+### Default Input
+
+Where possible, add programmatic assistance. Detect and pre-fill inputs to reduce errors and save time. When the software can’t determine the value that belongs in an input, use type-ahead to make suggestions. Use sentence-case for default values, detected values, and auto-completion text.
+
+---
+
+<TextInput />
+
+---
+
+---
+
+### Validation
+
+Real time validation helps to streamline the process and keep data clean when the user is filling out forms
+
+<TextInput
+    value="passwordpassword"
+    type="password"
+    passwordVisibleButton
+    passwordVisibleButton
+    invalid
+    invalidValue="Your Password must be more then 8 characters long"
+/>
+
+---
+
+---
+
+---
+
+---
+
+---
+
+## Content
+
+---
+
+### Placeholder Text
+
+Placeholder text provides hints or examples of what to enter. Placeholder text disappears after the user begins entering data into the input and should not contain crucial information. Use sentence-style capitalization, and in most cases, write the text as a direct statement without punctuation.
+
+---
+
+<TextInput placeHolder="Place Holder Text..." />
+
+---
+
+---
+
+### Labels
+
+Effective form labeling helps users understand what information to enter into a text input. Using placeholder text in lieu of a label is sometimes employed as a space-saving method.
+
+---
+
+<TextInput
+    placeHolder="Place Holder Text..."
+    label
+    labelValue="TextInput label"
+/>
+
+---
+
+---
+
+### Helper Text
+
+Helper text is pertinent information that assists the user in completing a field. Helper text is always available when the input is focused and appears underneath the label. Use sentence-style capitalization, and in most cases, write the text as full sentences with punctuation.
+
+---
+
+<TextInput
+    placeHolder="Place Holder Text..."
+    label
+    labelValue="TextInput label text"
+    helper
+    helperValue="TextInput helper text"
+/>
+
+---
+
+---
+
+---
+
+---
+
+---
+
+## Extra
+
+---
+
+### Toggle Password Visibility
+
+Toggle password visibility helps you experience the user experience of an input that takes over the password value with the passwordvisiblebutton attribute during TextInput's props.
+
+<TogglePasswordVisibility />
+
+---
+
+---
+
+### With Button Input
+
+`TextInput` and `Button` component can be used to create new external components.
+
+<WithButtonInput />
+
+---
+
+---
+
+---
+
+---
+
+---
+
+## Live Demo (Join Example)
+
+---
+
+---
+
+<JoinExample />
+
+---
+
+---
+
+---
+
+---
+
+---

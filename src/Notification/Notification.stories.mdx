@@ -1,0 +1,279 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+import Notification from "./Notification";
+import { ToastPosition, InlinePosition } from "./Notification.stories.tsx";
+import TextInput from "../TextInput/TextInput";
+
+<Meta title="Documents | Notification" />
+
+# Notification
+
+The `Notification` are messages that communicate information to the user. The two main types of notifications are toast notifications and inline notifications.
+
+---
+
+## Style
+
+---
+
+### Default Notification (Inline, Toast)
+
+---
+
+<Notification
+    title="Default Inline Notification Title"
+    subTitle="Default Inline Notification SubTitle."
+    kind="primary"
+    maxWidth="38rem"
+/>
+
+---
+
+<Notification
+    title="Default Toast Message Title"
+    subTitle="Default Toast Message SubTitle."
+    kind="primary"
+    type="toast"
+    caption="Toast Message captions"
+/>
+
+---
+
+1. Icon: Informs users of the type of notification at a glance.
+2. Title: Gives users a quick overview of the notification.
+3. Subtitle (optional): Provides additional detail and actionable steps for the user to take.
+4. Close button (optional): Closes the notification.
+5. Caption (optional): Shows the time the toast notification was sent.
+
+---
+
+### Notification Kinds(primary, info, success, warning, error)
+
+---
+
+#### Primary (Default)
+
+---
+
+<Notification
+    title="Primary Inline Notification Title"
+    subTitle="Primary Inline Notification SubTitle."
+    kind="primary"
+/>
+
+---
+
+<Notification
+    title="Primary Toast Message Title"
+    subTitle="Primary Toast Message SubTitle."
+    kind="primary"
+    type="toast"
+    caption="Toast Message captions"
+/>
+
+---
+
+#### Info
+
+---
+
+<Notification
+    title="Info Inline Notification Title"
+    subTitle="Info Inline Notification SubTitle."
+    kind="info"
+/>
+
+---
+
+<Notification
+    title="Info Toast Message Title"
+    subTitle="Info Toast Message SubTitle."
+    kind="info"
+    type="toast"
+    caption="Toast Message captions"
+/>
+
+---
+
+#### Success
+
+---
+
+<Notification
+    title="Success Inline Notification Title"
+    subTitle="Success Inline Notification SubTitle."
+    kind="success"
+/>
+
+---
+
+<Notification
+    title="Success Toast Message Title"
+    subTitle="Success Toast Message SubTitle."
+    kind="success"
+    type="toast"
+    caption="Toast Message captions"
+/>
+
+---
+
+#### Warning
+
+---
+
+<Notification
+    title="Warning Inline Notification Title"
+    subTitle="Warning Inline Notification SubTitle."
+    kind="warning"
+/>
+
+---
+
+<Notification
+    title="Warning Toast Message Title"
+    subTitle="Warning Toast Message SubTitle."
+    kind="warning"
+    type="toast"
+    caption="Toast Message captions"
+/>
+
+---
+
+#### Error
+
+---
+
+<Notification
+    title="Error Inline Notification Title"
+    subTitle="Error Inline Notification SubTitle."
+    kind="error"
+/>
+
+---
+
+<Notification
+    title="Error Toast Message Title"
+    subTitle="Error Toast Message SubTitle."
+    kind="error"
+    type="toast"
+    caption="Toast Message captions"
+/>
+
+---
+
+---
+
+## Formatting
+
+---
+
+---
+
+### Placement
+
+Inline notifications appear near their related items. They can expand to fill the width of the container or content area they are in and should align to the grid columns.
+
+We recommend placing inline notifications at the bottom of forms, just above the submission and cancel buttons. When error notifications apply to individual text inputs, they should supplement the error state on that specific input field
+
+<TextInput
+    value="passwordpassword"
+    type="password"
+    passwordVisibleButton
+    passwordVisibleButton
+    invalid
+    invalidValue="Your Password must be more then 8 characters long"
+/>
+
+---
+
+<Notification
+    title="Password Entry Error"
+    subTitle="Please check the password you entered."
+    kind="error"
+    maxWidth="100%"
+    hideCloseButton
+/>
+
+---
+
+---
+
+---
+
+---
+
+---
+
+## Content
+
+---
+
+### Hide Close Button
+
+---
+
+<Notification
+    title="Default Inline Notification Title"
+    subTitle="Default Inline Notification SubTitle."
+    kind="primary"
+    maxWidth="38rem"
+    hideCloseButton
+/>
+
+---
+
+<Notification
+    title="Default Toast Message Title"
+    subTitle="Default Toast Message SubTitle."
+    kind="primary"
+    type="toast"
+    caption="Toast Message captions"
+    hideCloseButton
+/>
+
+---
+
+---
+
+### Icon Visible
+
+---
+
+<Notification
+    title="Non Icon Inline Notification Title"
+    subTitle="Non Icon Inline Notification SubTitle."
+    kind="primary"
+    icon={false}
+/>
+
+---
+
+<Notification
+    title="Non Icon Toast Message Title"
+    subTitle="Non Icon Toast Message SubTitle."
+    kind="primary"
+    type="toast"
+    caption="Toast Message captions"
+    icon={false}
+/>
+
+---
+
+---
+
+## Live Demo (Timeout, Notification position)
+
+---
+
+### Inline Notification
+
+---
+
+<InlinePosition />
+
+---
+
+### Toast Message
+
+---
+
+<ToastPosition />

@@ -1,0 +1,73 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+import Default from "./stories/Default";
+import Extension from "./stories/Extension";
+
+<Meta title="Documents|Pagination" />
+
+# Pagination
+
+The default props of the `Pagination` component are callback functions that is called when pagination nav buttons are clicked, and offset. The default value of the limit, which determines how many items to show on a single page, is 25 and can be changed by forwarding them to props.
+
+---
+
+<Default />
+
+---
+
+---
+
+The first page and the last page are shown fixedly, and the current page shows the pageant button within a certain range.
+
+## Extension
+
+Using with the limit selector and the input that enters the page that want to go to in the parent component.
+
+<Extension />
+
+```javascript
+const [offset, setOffest] = useState(0);
+const [limit, setLimit] = useState(10);
+const [pageInputValue, setPageInputValue] = useState("");
+const total = number("total", 500);
+return (
+    <div className="bx-data-table-bottom" css={[style]}>
+        <div className="bx-select-limit">
+            Show{" "}
+            <Select
+                options={limitOptions}
+                callbackFunc={(_limit) => {
+                    setLimit(_limit);
+                    setOffest(0);
+                }}
+            />{" "}
+            Entries
+        </div>
+        <Pagination
+            limit={limit}
+            offset={offset}
+            total={total}
+            callbackFunc={(_offset: number) => {
+                setOffest(_offset);
+            }}
+        />
+        <div className="bx-input-goto">
+            <input
+                type="text"
+                value={pageInputValue}
+                onChange={(e) => {
+                    setPageInputValue(e.target.value);
+                }}
+            />
+            <button
+                onClick={() => {
+                    setOffest((Number(pageInputValue) - 1) * limit);
+                }}
+            >
+                Go
+            </button>
+        </div>
+    </div>
+);
+```
+
+---
